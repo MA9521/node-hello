@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
   const msg = 'Hello Node!\n'
   res.end(msg);
 });
-
-server.listen(port, () => {
+console.log("Hello Node!\n");
+/*server.listen(port, () => {
   console.log(`Server running on http://localhost:${port}/`);
-});
+});*/
