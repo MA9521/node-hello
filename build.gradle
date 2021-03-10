@@ -1,7 +1,11 @@
-task hello << {
-  print 'hello, '
+tasks.register('hello') {
+    doLast {
+        println 'Hello world!'
+    }
 }
-
-task world(dependsOn: hello) << {
-  println 'world'
+tasks.register('intro') {
+    dependsOn tasks.hello
+    doLast {
+        println "I'm Gradle"
+    }
 }
